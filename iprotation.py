@@ -1,6 +1,7 @@
 import subprocess
 import time
 import os
+import sys
 print("""
 #########################################################
 #  _______            __                                #
@@ -25,7 +26,8 @@ interface="eth0"
 port="25"
 chanel="11"
 #ip="192.168.0.1"
-with open("iplist.txt", "rU") as x:
+iplist=sys.argv[1]
+with open(iplist, "rU") as x:
 
         for i in x:
             i=i.strip()
